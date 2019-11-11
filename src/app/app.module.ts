@@ -6,31 +6,33 @@ import { AppComponent } from './app.component';
 import { WagtailModule } from 'angular-wagtail';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    WagtailModule.forRoot({
-      pageTypes: [
-        {
-          type: 'catalog.ProductIndex',
-          loadChildren: () => import('./shop/product-index/product-index.module').then(m => m.ProductIndexModule)
-        },
-        {
-          type: 'catalog.Product',
-          loadChildren: () => import('./shop/product/product.module').then(m => m.ProductModule)
-        },
-      ],
-      wagtailSiteDomain: 'http://localhost:8000',
-    }),
-    NgbModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+   declarations: [
+      AppComponent,
+      FooterComponent
+   ],
+   imports: [
+      BrowserModule,
+      AppRoutingModule,
+      WagtailModule.forRoot({
+         pageTypes: [
+            {
+               type: 'catalog.ProductIndex',
+               loadChildren: () => import('./shop/product-index/product-index.module').then(m => m.ProductIndexModule)
+            },
+            {
+               type: 'catalog.Product',
+               loadChildren: () => import('./shop/product/product.module').then(m => m.ProductModule)
+            },
+         ],
+         wagtailSiteDomain: 'http://localhost:8000',
+      }),
+      NgbModule
+   ],
+   providers: [],
+   bootstrap: [AppComponent]
 })
 export class AppModule {
 }
