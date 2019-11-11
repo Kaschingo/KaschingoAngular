@@ -19,6 +19,10 @@ import { FooterComponent } from './footer/footer.component';
       WagtailModule.forRoot({
          pageTypes: [
             {
+               type: 'home.HomePage',
+               loadChildren: () => import('./home-page/home-page.module').then(m => m.HomePageModule)
+            },
+            {
                type: 'catalog.ProductIndex',
                loadChildren: () => import('./shop/product-index/product-index.module').then(m => m.ProductIndexModule)
             },
