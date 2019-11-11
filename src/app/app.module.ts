@@ -30,6 +30,14 @@ import { FooterComponent } from './footer/footer.component';
                type: 'catalog.Product',
                loadChildren: () => import('./shop/product/product.module').then(m => m.ProductModule)
             },
+            {
+               type: 'puput.BlogPage',
+               loadChildren: () => import('./blog/blog-page/blog-page.module').then(m => m.BlogPageModule)
+            },
+            {
+               type: 'puput.EntryPage',
+               loadChildren: () => import('./blog/entry-page/entry-page.module').then(m => m.EntryPageModule)
+            },
          ],
          wagtailSiteDomain: 'http://localhost:8000',
       }),
