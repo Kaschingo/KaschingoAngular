@@ -1,9 +1,11 @@
-import {BrowserModule} from '@angular/platform-browser';
-import {NgModule} from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
 
-import {AppRoutingModule} from './app-routing.module';
-import {AppComponent} from './app.component';
-import {WagtailModule} from 'angular-wagtail';
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { WagtailModule } from 'angular-wagtail';
+
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,7 @@ import {WagtailModule} from 'angular-wagtail';
       ],
       wagtailSiteDomain: 'http://localhost:8000',
     }),
-
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
