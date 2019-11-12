@@ -1,1 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
+  }
+  body {
+    margin-bottom: 13.5em; /* Margin bottom by footer height */
+  }
+  app-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
