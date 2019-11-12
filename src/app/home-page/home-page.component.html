@@ -1,2 +1,1 @@
-<p>home-page works!</p>
-<p>{{ (cmsData$ | async).title }}</p>
+<app-stream-field [streamFields]='(cmsData$ | async).body'></app-stream-field>

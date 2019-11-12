@@ -7,6 +7,7 @@ import { WagtailModule } from 'angular-wagtail';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FooterComponent } from './footer/footer.component';
+import { HttpClientModule } from '@angular/common/http';
 
 const wagtailModuleSettings = {
    pageTypes:
@@ -45,9 +46,12 @@ const wagtailModuleSettings = {
       AppRoutingModule,
       NgbModule,
       WagtailModule.forRoot(wagtailModuleSettings),
+      HttpClientModule,
    ],
    providers: [],
-   bootstrap: [AppComponent]
+   bootstrap: [
+      AppComponent
+   ]
 })
 export class AppModule {
 }

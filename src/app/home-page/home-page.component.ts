@@ -3,9 +3,10 @@ import { IWagtailPageDetail } from 'angular-wagtail';
 import { Observable } from 'rxjs';
 import { ActivatedRoute } from '@angular/router';
 import { map } from 'rxjs/operators';
+import { IStreamField } from '../stream-field/stream-field.component';
 
 interface IHomePageDetails extends IWagtailPageDetail {
-  extra_field: string;
+  body: IStreamField[];
 }
 
 @Component({

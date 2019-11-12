@@ -1,0 +1,12 @@
+<div *ngFor='let streamField of streamFields' [ngSwitch]="streamField.type">
+
+    <div *ngSwitchCase="'heading'" id="{{streamField.id}}">
+        <h2>{{streamField.value}}</h2>
+    </div>
+
+    <app-image *ngSwitchCase="'image'" [imageId]='streamField.value' id="{{streamField.id}}"></app-image>
+
+    <div *ngSwitchCase="'paragraph'" id="{{streamField.id}}">
+        <div [innerHTML]='streamField.value'></div>
+    </div>
+</div>
